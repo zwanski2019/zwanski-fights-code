@@ -28,7 +28,8 @@ const Scene: React.FC<SceneProps> = ({
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in');
+            entry.target.classList.add('opacity-100');
+            entry.target.classList.remove('opacity-0');
           }
         });
       },
@@ -50,7 +51,7 @@ const Scene: React.FC<SceneProps> = ({
     <div 
       ref={sceneRef}
       className={cn(
-        'scene-container opacity-0',
+        'scene-container opacity-0 transition-opacity duration-500 ease-in-out',
         dark ? 'bg-night text-white' : 'bg-white text-night',
         className
       )}

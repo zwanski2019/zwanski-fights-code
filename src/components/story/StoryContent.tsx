@@ -13,20 +13,22 @@ const StoryContent: React.FC = () => {
     <div className="max-w-5xl mx-auto">
       <StoryHeader />
       
-      {/* Scene 1: The Escape */}
-      <EscapeScene />
-      
-      {/* Scene 2: Yasine's Light */}
-      <YasineScene />
-      
-      {/* Scene 3: Betrayal & Resilience */}
-      <BetrayalScene />
-      
-      {/* Scene 4: The Code of Hope */}
-      <CodeOfHopeScene />
-      
-      {/* Scene 5: Call to the World */}
-      <CallToWorldScene />
+      <div className="space-y-16">
+        {/* Scene 1: The Escape */}
+        <EscapeScene />
+        
+        {/* Scene 2: Yasine's Light */}
+        <YasineScene />
+        
+        {/* Scene 3: Betrayal & Resilience */}
+        <BetrayalScene />
+        
+        {/* Scene 4: The Code of Hope */}
+        <CodeOfHopeScene />
+        
+        {/* Scene 5: Call to the World */}
+        <CallToWorldScene />
+      </div>
       
       {/* Closing Scene */}
       <ClosingBanner />
