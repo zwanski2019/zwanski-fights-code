@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { GithubIcon, LinkedinIcon, MailIcon } from 'lucide-react';
+import { GithubIcon, MailIcon } from 'lucide-react';
+import WordPressNavItem from './WordPressNavItem';
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -34,6 +35,7 @@ const Navbar: React.FC = () => {
           >
             Contact
           </Link>
+          <WordPressNavItem />
         </nav>
         <div className="ml-auto flex items-center space-x-4">
           <a 
