@@ -9,13 +9,17 @@ import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Json } from '@/integrations/supabase/types';
 
 interface AIService {
   id: string;
   service_name: string;
   api_key: string | null;
   is_enabled: boolean;
-  settings: any;
+  settings: Json | null;
+  created_at: string;
+  updated_at: string;
+  user_id: string;
 }
 
 const aiServiceOptions = [
@@ -53,13 +57,17 @@ const AIServiceSettings: React.FC = () => {
       const servicesData = [...(data || [])];
       
       for (const option of aiServiceOptions) {
-        if (!existingServiceIds.has(option.id)) {
+        if (!existingServiceIds.has(option.id) && user) {
+          // Create a placeholder service with all required fields
           servicesData.push({
             id: 'new', // Temp ID, will be replaced on save
             service_name: option.id,
             api_key: null,
             is_enabled: false,
-            settings: {}
+            settings: {},
+            created_at: new Date().toISOString(),
+            updated_at: new Date().toISOString(),
+            user_id: user.id
           });
         }
       }
