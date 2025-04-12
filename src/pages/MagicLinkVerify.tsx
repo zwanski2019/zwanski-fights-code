@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
@@ -21,6 +22,14 @@ const MagicLinkVerify = () => {
   const errorDescription = searchParams.get('error_description');
   const hasError = Boolean(errorCode);
   
+  // Automatically populate email if it's in the URL
+  useEffect(() => {
+    const emailFromParams = searchParams.get('email');
+    if (emailFromParams) {
+      setEmail(decodeURIComponent(emailFromParams));
+    }
+  }, [searchParams]);
+
   const handleVerifyWithOTP = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !otp) {
