@@ -9,7 +9,119 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      ai_services: {
+        Row: {
+          api_key: string | null
+          created_at: string
+          id: string
+          is_enabled: boolean | null
+          service_name: string
+          settings: Json | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          api_key?: string | null
+          created_at?: string
+          id?: string
+          is_enabled?: boolean | null
+          service_name: string
+          settings?: Json | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          api_key?: string | null
+          created_at?: string
+          id?: string
+          is_enabled?: boolean | null
+          service_name?: string
+          settings?: Json | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      content_generations: {
+        Row: {
+          ai_service_id: string | null
+          content: string | null
+          created_at: string
+          id: string
+          metadata: Json | null
+          prompt: string
+          status: string
+          title: string | null
+          updated_at: string
+          user_id: string
+          wordpress_post_id: number | null
+        }
+        Insert: {
+          ai_service_id?: string | null
+          content?: string | null
+          created_at?: string
+          id?: string
+          metadata?: Json | null
+          prompt: string
+          status: string
+          title?: string | null
+          updated_at?: string
+          user_id: string
+          wordpress_post_id?: number | null
+        }
+        Update: {
+          ai_service_id?: string | null
+          content?: string | null
+          created_at?: string
+          id?: string
+          metadata?: Json | null
+          prompt?: string
+          status?: string
+          title?: string | null
+          updated_at?: string
+          user_id?: string
+          wordpress_post_id?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "content_generations_ai_service_id_fkey"
+            columns: ["ai_service_id"]
+            isOneToOne: false
+            referencedRelation: "ai_services"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      wordpress_credentials: {
+        Row: {
+          app_password: string
+          created_at: string
+          id: string
+          site_url: string
+          updated_at: string
+          user_id: string
+          username: string
+        }
+        Insert: {
+          app_password: string
+          created_at?: string
+          id?: string
+          site_url: string
+          updated_at?: string
+          user_id: string
+          username: string
+        }
+        Update: {
+          app_password?: string
+          created_at?: string
+          id?: string
+          site_url?: string
+          updated_at?: string
+          user_id?: string
+          username?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
