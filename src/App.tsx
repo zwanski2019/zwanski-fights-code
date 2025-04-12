@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import WordPressManager from "./pages/WordPressManager";
 import Auth from "./pages/Auth";
+import MagicLinkVerify from "./pages/MagicLinkVerify";
 
 // Create a new QueryClient instance
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => {
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/auth" element={<Auth />} />
+              <Route path="/verify" element={<MagicLinkVerify />} />
               <Route 
                 path="/wordpress" 
                 element={

@@ -8,11 +8,13 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/components/ui/use-toast";
+import { Separator } from "@/components/ui/separator";
 
 const Auth: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [isPasswordless, setIsPasswordless] = useState(false);
   const { toast } = useToast();
   const navigate = useNavigate();
 
@@ -42,17 +44,30 @@ const Auth: React.FC = () => {
     setIsLoading(true);
     
     try {
-      const { error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
-      });
-      
-      if (error) throw error;
-      
-      toast({
-        title: "Signed in successfully",
-        description: "Redirecting to dashboard...",
-      });
+      if (isPasswordless) {
+        const { error } = await supabase.auth.signInWithOtp({
+          email,
+        });
+        
+        if (error) throw error;
+        
+        toast({
+          title: "Verification email sent",
+          description: "Check your email for the login link or verification code",
+        });
+      } else {
+        const { error } = await supabase.auth.signInWithPassword({
+          email,
+          password,
+        });
+        
+        if (error) throw error;
+        
+        toast({
+          title: "Signed in successfully",
+          description: "Redirecting to dashboard...",
+        });
+      }
     } catch (error: any) {
       toast({
         title: "Sign in failed",
@@ -119,23 +134,61 @@ const Auth: React.FC = () => {
                     required
                   />
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="password">Password</Label>
-                  <Input 
-                    id="password" 
-                    type="password" 
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
+                
+                {!isPasswordless && (
+                  <div className="space-y-2">
+                    <Label htmlFor="password">Password</Label>
+                    <Input 
+                      id="password" 
+                      type="password" 
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required={!isPasswordless}
+                    />
+                  </div>
+                )}
+                
+                <div className="flex items-center space-x-2">
+                  <input 
+                    type="checkbox" 
+                    id="passwordless" 
+                    checked={isPasswordless}
+                    onChange={() => setIsPasswordless(!isPasswordless)}
+                    className="rounded border-gray-300 text-primary focus:ring-primary"
                   />
+                  <Label htmlFor="passwordless" className="text-sm cursor-pointer">
+                    Sign in with magic link (no password)
+                  </Label>
                 </div>
               </CardContent>
               <CardFooter>
                 <Button className="w-full" type="submit" disabled={isLoading}>
-                  {isLoading ? "Signing in..." : "Sign In"}
+                  {isLoading ? "Processing..." : isPasswordless ? "Send Magic Link" : "Sign In"}
                 </Button>
               </CardFooter>
             </form>
+            
+            <div className="px-6 py-2">
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <Separator />
+                </div>
+                <div className="relative flex justify-center">
+                  <span className="bg-background px-2 text-xs text-muted-foreground">
+                    Having trouble signing in?
+                  </span>
+                </div>
+              </div>
+              <div className="mt-4 text-center">
+                <Button
+                  variant="link"
+                  className="text-xs text-muted-foreground"
+                  onClick={() => navigate('/verify')}
+                >
+                  Verify with code
+                </Button>
+              </div>
+            </div>
           </TabsContent>
           
           <TabsContent value="signup">
