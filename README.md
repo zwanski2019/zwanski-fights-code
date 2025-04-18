@@ -1,73 +1,98 @@
-# Welcome to your Lovable project
+```markdown
+# 🛡️ Mohamed "Zwanski" Ibrahim  
+#### *From Survival to Code: A Journey of Resilience & Innovation*  
 
-## Project info
+> "Every line of code is a step forward" - #ZwanskiFightsOn  
 
-**URL**: https://lovable.dev/projects/71dfa868-6377-40d1-b488-679a304636e9
+---
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/71dfa868-6377-40d1-b488-679a304636e9) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## 🌍 **Human Story in Binary**  
+**Survivalist → Technician → Security Architect**  
+```diff
++ 2019: Escaped Niger via Algeria → Tunisia
++ 2021: Cybersecurity Certification Journey Begins
++ 2023: Launched First AI-Powered WordPress Plugin
++ 2024: 65% Vulnerability Block Rate Achieved
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 🧩 **Core Philosophy**  
+> "I don't fix bugs – I outsmart systemic failures."  
 
-**Use GitHub Codespaces**
+**Technical Alchemy**  
+- Repaired discarded electronics → Now architect threat detection systems  
+- Survived human trafficking networks → Now harden digital infrastructure  
+- Mastered 5 human languages → Fluent in 8 programming dialects  
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 🛠️ **Technical Arsenal**  
 
-This project is built with:
+### 🔐 **Security Architecture**  
+![Security Shield](https://img.shields.io/badge/Threat_Block_Rate-65%25-red?style=for-the-badge)  
+![ISC2](https://img.shields.io/badge/ISC2-Certified-blue?logo=isc2&style=flat)  
+![Wazuh](https://img.shields.io/badge/Wazuh-Certified_Architect-orange?logo=wazuh&style=flat)  
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### 💻 **Code Toolkit**  
+![PHP](https://img.shields.io/badge/PHP-Expert-777BB4?logo=php&logoColor=white)  
+![React](https://img.shields.io/badge/React-JS/TS-61DAFB?logo=react)  
+![Python](https://img.shields.io/badge/Python-ML_Automation-3776AB?logo=python)  
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/71dfa868-6377-40d1-b488-679a304636e9) and click on Share -> Publish.
+## 🚀 **Signature Projects**  
 
-## Can I connect a custom domain to my Lovable project?
+### **Zwansave Dashboard**  
+![PHP](https://img.shields.io/badge/-PHP-777BB4?logo=php)  
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript)  
+> Reduced client CPU load by 45% through intelligent process orchestration  
 
-Yes it is!
+### **EurOrbit Weather**  
+![React](https://img.shields.io/badge/-React-61DAFB?logo=react)  
+![Python](https://img.shields.io/badge/-Python-3776AB?logo=python)  
+> ML-powered weather predictions for conflict zones (93% accuracy in sandstorms)  
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### **WordPress/GitHub Sync Engine**  
+![PHP](https://img.shields.io/badge/-PHP-777BB4?logo=php)  
+![Git](https://img.shields.io/badge/-Git-F05032?logo=git)  
+> Real-time CMS version control – 0.2s deployment latency  
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+
+## 🌟 **Why Collaborate With Zwanski?**  
+
+| Survival Engineering | Security-First DNA | Cross-Domain Fluency |
+|-----------------------|---------------------|-----------------------|
+| Optimized systems in resource-starved environments | Pen-tested life experiences | 5 human languages × 8 coding languages |
+
+---
+
+## 📡 **Connect With a Fighter**  
+
+```bash
+# Terminal-to-Real-World Protocol
+📞 Call: +216 94 934 141  
+📧 Encrypted Mail: [WordPress AI Integration](https://your-portfolio-link)  
+🌍 Cultural Coordinates: Tunisian/Saharan Timezone (UTC+1)  
+```
+
+---
+
+```diff
+# Commit Message
+- 2019: Refugee  
++ 2024: Security Architect  
+```  
+**Built with PHP & Persistence**  
+© 2025 Mohamed Ibrahim – Every Byte Tells a Story  
+```
+
+---
+
+### 🎯 **Key Features**  
+- **Visual Storytelling**: Badges/timelines show progression from survival to tech mastery  
+- **Technical Depth**: Shields.io integrations demonstrate hard skills  
+- **Human Narrative**: Maintains raw, authentic voice from original story  
+- **Call-to-Action**: Clear contact protocol for recruiters/collaborators  
+- **Mobile-Optimized**: Clean markdown structure renders beautifully on all devices  
